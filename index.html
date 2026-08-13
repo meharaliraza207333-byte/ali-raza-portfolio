@@ -48,9 +48,11 @@
         <li><a href="#hero" class="nav-link active">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
         <li><a href="#portfolio" class="nav-link">Projects</a></li>
         <li><a href="#reviews" class="nav-link">Reviews</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="https://wa.me/923281132589" target="_blank" rel="noopener" class="nav-link nav-hire">Hire Me</a></li>
       </ul>
       <div class="nav-actions">
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light and dark mode">
@@ -75,17 +77,22 @@
           <span class="typed-text" id="typedText"></span>
           <span class="cursor">|</span>
         </div>
-        <p class="hero-description">Passionate about crafting beautiful, responsive, and user-friendly web experiences that leave a lasting impression.</p>
+        <p class="hero-description">I build fast, responsive, and client-focused websites using <strong>PHP, Laravel, WordPress</strong> &amp; modern frontend technologies. Based in Lahore, Pakistan — available for freelance worldwide.</p>
+        <div class="hero-badges">
+          <span class="hero-badge"><i class="fab fa-laravel"></i> Laravel</span>
+          <span class="hero-badge"><i class="fab fa-wordpress"></i> WordPress</span>
+          <span class="hero-badge"><i class="fab fa-php"></i> PHP</span>
+          <span class="hero-badge"><i class="fab fa-js-square"></i> JavaScript</span>
+        </div>
         <div class="hero-buttons">
-          <a href="#portfolio" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+          <a href="https://wa.me/923281132589" target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Hire Me on WhatsApp</a>
+          <a href="#portfolio" class="btn btn-primary">View Projects</a>
           <a href="Assets/cv/Ali_Raza_CV.pdf" target="_blank" rel="noopener" class="btn btn-resume"><i class="fas fa-file-pdf"></i> View CV</a>
         </div>
         <div class="hero-socials">
           <a href="https://github.com/meharaliraza207333-byte/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/ali-raza-0301333a9/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           <a href="https://wa.me/923281132589" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="mailto:meharaliraza207333@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
@@ -144,82 +151,47 @@
   <section id="skills" class="section skills-section">
     <div class="container">
       <h2 class="section-title reveal"><span>My</span> Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card reveal" data-skill="95">
-          <div class="skill-icon"><i class="fab fa-html5"></i></div>
-          <h4>HTML5</h4>
-          <div class="skill-bar"><div class="skill-progress" data-width="95"></div></div>
-          <span class="skill-percent">95%</span>
+      <div class="skills-tabs reveal">
+        <button class="skill-tab active" data-tab="frontend">Frontend</button>
+        <button class="skill-tab" data-tab="backend">Backend</button>
+        <button class="skill-tab" data-tab="cms">CMS / E-Commerce</button>
+        <button class="skill-tab" data-tab="tools">Tools</button>
+      </div>
+      <div class="skills-panel active" id="tab-frontend">
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-skill="95"><div class="skill-icon"><i class="fab fa-html5"></i></div><h4>HTML5</h4><div class="skill-bar"><div class="skill-progress" data-width="95"></div></div><span class="skill-percent">95%</span></div>
+          <div class="skill-card reveal" data-skill="90"><div class="skill-icon"><i class="fab fa-css3-alt"></i></div><h4>CSS3</h4><div class="skill-bar"><div class="skill-progress" data-width="90"></div></div><span class="skill-percent">90%</span></div>
+          <div class="skill-card reveal" data-skill="80"><div class="skill-icon"><i class="fab fa-js-square"></i></div><h4>JavaScript</h4><div class="skill-bar"><div class="skill-progress" data-width="80"></div></div><span class="skill-percent">80%</span></div>
+          <div class="skill-card reveal" data-skill="85"><div class="skill-icon"><i class="fab fa-bootstrap"></i></div><h4>Bootstrap</h4><div class="skill-bar"><div class="skill-progress" data-width="85"></div></div><span class="skill-percent">85%</span></div>
+          <div class="skill-card reveal" data-skill="90"><div class="skill-icon"><i class="fas fa-mobile-alt"></i></div><h4>Responsive Design</h4><div class="skill-bar"><div class="skill-progress" data-width="90"></div></div><span class="skill-percent">90%</span></div>
+          <div class="skill-card reveal" data-skill="75"><div class="skill-icon"><i class="fas fa-paint-brush"></i></div><h4>UI/UX Design</h4><div class="skill-bar"><div class="skill-progress" data-width="75"></div></div><span class="skill-percent">75%</span></div>
         </div>
-        <div class="skill-card reveal" data-skill="90">
-          <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-          <h4>CSS3</h4>
-          <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
-          <span class="skill-percent">90%</span>
+      </div>
+      <div class="skills-panel" id="tab-backend">
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-skill="75"><div class="skill-icon"><i class="fab fa-php"></i></div><h4>PHP</h4><div class="skill-bar"><div class="skill-progress" data-width="75"></div></div><span class="skill-percent">75%</span></div>
+          <div class="skill-card reveal" data-skill="70"><div class="skill-icon"><i class="fab fa-laravel"></i></div><h4>Laravel</h4><div class="skill-bar"><div class="skill-progress" data-width="70"></div></div><span class="skill-percent">70%</span></div>
+          <div class="skill-card reveal" data-skill="80"><div class="skill-icon"><i class="fas fa-database"></i></div><h4>MySQL</h4><div class="skill-bar"><div class="skill-progress" data-width="80"></div></div><span class="skill-percent">80%</span></div>
         </div>
-        <div class="skill-card reveal" data-skill="80">
-          <div class="skill-icon"><i class="fab fa-js-square"></i></div>
-          <h4>JavaScript</h4>
-          <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
-          <span class="skill-percent">80%</span>
+      </div>
+      <div class="skills-panel" id="tab-cms">
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-skill="85"><div class="skill-icon"><i class="fab fa-wordpress"></i></div><h4>WordPress</h4><div class="skill-bar"><div class="skill-progress" data-width="85"></div></div><span class="skill-percent">85%</span></div>
+          <div class="skill-card reveal" data-skill="80"><div class="skill-icon"><i class="fab fa-elementor"></i></div><h4>Elementor</h4><div class="skill-bar"><div class="skill-progress" data-width="80"></div></div><span class="skill-percent">80%</span></div>
+          <div class="skill-card reveal" data-skill="75"><div class="skill-icon"><i class="fas fa-shopping-cart"></i></div><h4>WooCommerce</h4><div class="skill-bar"><div class="skill-progress" data-width="75"></div></div><span class="skill-percent">75%</span></div>
         </div>
-        <div class="skill-card reveal" data-skill="85">
-          <div class="skill-icon"><i class="fab fa-bootstrap"></i></div>
-          <h4>Bootstrap</h4>
-          <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
-          <span class="skill-percent">85%</span>
-        </div>
-        <div class="skill-card reveal" data-skill="90">
-          <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
-          <h4>Responsive Design</h4>
-          <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
-          <span class="skill-percent">90%</span>
-        </div>
-        <div class="skill-card reveal" data-skill="85">
-          <div class="skill-icon"><i class="fab fa-wordpress"></i></div>
-          <h4>WordPress</h4>
-          <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
-          <span class="skill-percent">85%</span>
-        </div>
-        <div class="skill-card reveal" data-skill="80">
-          <div class="skill-icon"><i class="fab fa-elementor"></i></div>
-          <h4>Elementor</h4>
-          <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
-          <span class="skill-percent">80%</span>
-        </div>
-        <div class="skill-card reveal" data-skill="75">
-          <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
-          <h4>UI/UX Design</h4>
-          <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
-          <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-card reveal" data-skill="75">
-          <div class="skill-icon"><i class="fab fa-php"></i></div>
-          <h4>PHP</h4>
-          <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
-          <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-card reveal" data-skill="70">
-          <div class="skill-icon"><i class="fab fa-laravel"></i></div>
-          <h4>Laravel</h4>
-          <div class="skill-bar"><div class="skill-progress" data-width="70"></div></div>
-          <span class="skill-percent">70%</span>
-        </div>
-        <div class="skill-card reveal" data-skill="80">
-          <div class="skill-icon"><i class="fas fa-database"></i></div>
-          <h4>MySQL</h4>
-          <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
-          <span class="skill-percent">80%</span>
-        </div>
-        <div class="skill-card reveal" data-skill="75">
-          <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
-          <h4>Git / GitHub</h4>
-          <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
-          <span class="skill-percent">75%</span>
+      </div>
+      <div class="skills-panel" id="tab-tools">
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-skill="75"><div class="skill-icon"><i class="fab fa-git-alt"></i></div><h4>Git / GitHub</h4><div class="skill-bar"><div class="skill-progress" data-width="75"></div></div><span class="skill-percent">75%</span></div>
+          <div class="skill-card reveal" data-skill="70"><div class="skill-icon"><i class="fas fa-drafting-compass"></i></div><h4>Figma</h4><div class="skill-bar"><div class="skill-progress" data-width="70"></div></div><span class="skill-percent">70%</span></div>
+          <div class="skill-card reveal" data-skill="90"><div class="skill-icon"><i class="fas fa-code"></i></div><h4>VS Code</h4><div class="skill-bar"><div class="skill-progress" data-width="90"></div></div><span class="skill-percent">90%</span></div>
         </div>
       </div>
     </div>
   </section>
+
+
 
   <!-- Services Section -->
   <section id="services" class="section services-section">
@@ -228,8 +200,8 @@
       <div class="services-grid">
         <div class="service-card reveal">
           <div class="service-icon"><i class="fas fa-code"></i></div>
-          <h3>Frontend Development</h3>
-          <p>Building modern, fast, and interactive user interfaces using HTML5, CSS3, JavaScript, and Bootstrap with clean, maintainable code.</p>
+          <h3>Custom Website Development</h3>
+          <p>Building modern, fast, and interactive websites from scratch using HTML5, CSS3, JavaScript, and Bootstrap with clean, maintainable code.</p>
         </div>
         <div class="service-card reveal">
           <div class="service-icon"><i class="fab fa-wordpress"></i></div>
@@ -249,11 +221,22 @@
         <div class="service-card reveal">
           <div class="service-icon"><i class="fab fa-php"></i></div>
           <h3>PHP / Laravel Development</h3>
-          <p>Building robust backend applications with PHP and Laravel framework including APIs, authentication, database management, and MVC architecture.</p>
+          <p>Building robust backend applications with PHP and Laravel including APIs, authentication, database management, and MVC architecture.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-shopping-bag"></i></div>
+          <h3>WooCommerce Development</h3>
+          <p>Setting up and customizing WooCommerce online stores with product management, payment gateways, and optimized checkout flows.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <h3>Bug Fixing &amp; Maintenance</h3>
+          <p>Diagnosing and fixing website issues, improving performance, updating plugins, and providing ongoing support for your web projects.</p>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- Portfolio Section -->
   <section id="portfolio" class="section portfolio-section">
@@ -488,11 +471,12 @@
               </div>
             </div>
           </div>
+          <a href="https://wa.me/923281132589" target="_blank" rel="noopener" class="btn btn-whatsapp btn-whatsapp-lg"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
           <div class="contact-socials">
             <a href="https://github.com/meharaliraza207333-byte" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/ali-raza-0301333a9/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://wa.me/923281132589" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:meharaliraza207333@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
         <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/meharaliraza207333@gmail.com" method="POST">
@@ -533,7 +517,6 @@
             <a href="https://github.com/meharaliraza207333-byte" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/ali-raza-0301333a9/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://wa.me/923281132589" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="mailto:meharaliraza207333@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
@@ -562,6 +545,57 @@
   <!-- Back to Top -->
   <button id="backToTop" class="back-to-top" aria-label="Back to Top">
     <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Mobile Sticky Contact Bar -->
+  <div class="mobile-sticky-bar" id="mobileStickyBar" role="navigation" aria-label="Quick contact">
+    <a href="https://wa.me/923281132589" target="_blank" rel="noopener" class="sticky-btn sticky-whatsapp" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="mailto:meharaliraza207333@gmail.com" class="sticky-btn sticky-email" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+      <span>Email</span>
+    </a>
+    <a href="#contact" class="sticky-btn sticky-hire" aria-label="Hire Me">
+      <i class="fas fa-handshake"></i>
+      <span>Hire Me</span>
+    </a>
+  </div>
+
+  <!-- Floating WhatsApp Widget -->
+  <div class="wa-chat-widget" id="waChatWidget">
+    <div class="wa-chat-header">
+      <div class="wa-chat-avatar-status">
+        <img src="Assets/Images/avatar.jpg" alt="Ali Raza" class="wa-chat-avatar">
+        <span class="wa-status-dot"></span>
+      </div>
+      <div class="wa-chat-title-info">
+        <h4>Ali Raza</h4>
+        <p><span class="status-text">Online</span></p>
+      </div>
+      <button class="wa-chat-close" id="waChatClose" aria-label="Close chat"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-msg-bubble">
+        <p class="wa-msg-time">Just now</p>
+        <div class="wa-msg-text">
+          Hi there! 👋 I build premium websites using Laravel, WordPress, and React. How can I help you today?
+        </div>
+      </div>
+    </div>
+    <div class="wa-chat-footer">
+      <input type="text" id="waChatInput" placeholder="Type a message..." aria-label="WhatsApp message input">
+      <button id="waChatSend" aria-label="Send WhatsApp message"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <button class="whatsapp-floating-btn" id="waToggleBtn" aria-label="Open WhatsApp Chat">
+    <div class="whatsapp-badge">1</div>
+    <div class="whatsapp-icon-wrapper">
+      <i class="fab fa-whatsapp"></i>
+    </div>
+    <div class="whatsapp-tooltip">Chat with me!</div>
   </button>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>

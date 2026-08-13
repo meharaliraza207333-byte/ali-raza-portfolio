@@ -352,3 +352,105 @@ if (backToTop) {
   });
 })();
 
+/* ========== Skills Tabs Switching ========== */
+(function initSkillsTabs() {
+  const tabs = document.querySelectorAll('.skill-tab');
+  const panels = document.querySelectorAll('.skills-panel');
+  if (!tabs.length || !panels.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-tab');
+
+      // Update active tab button
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      // Update visible tab panel
+      panels.forEach(panel => {
+        if (panel.getAttribute('id') === `tab-${target}`) {
+          panel.classList.add('active');
+          // Re-trigger progress bar animations inside the active panel
+          const progresses = panel.querySelectorAll('.skill-progress');
+          progresses.forEach(progress => {
+            const width = progress.getAttribute('data-width');
+            progress.style.width = '0%';
+            setTimeout(() => {
+              progress.style.width = width + '%';
+            }, 50);
+          });
+        } else {
+          panel.classList.remove('active');
+        }
+      });
+    });
+  });
+})();
+
+/* ========== Mobile Sticky Contact Bar Scroll Logic ========== */
+(function initMobileStickyBar() {
+  const bar = document.getElementById('mobileStickyBar');
+  if (!bar) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.innerWidth <= 768) {
+      if (window.scrollY > 300) {
+        bar.classList.add('visible');
+      } else {
+        bar.classList.remove('visible');
+      }
+    } else {
+      bar.classList.remove('visible');
+    }
+  });
+})();
+
+/* ========== WhatsApp Chat Widget Logic ========== */
+(function initWhatsAppWidget() {
+  const toggleBtn = document.getElementById('waToggleBtn');
+  const widget = document.getElementById('waChatWidget');
+  const closeBtn = document.getElementById('waChatClose');
+  const sendBtn = document.getElementById('waChatSend');
+  const input = document.getElementById('waChatInput');
+
+  if (!toggleBtn || !widget) return;
+
+  toggleBtn.addEventListener('click', () => {
+    widget.classList.toggle('active');
+    const badge = toggleBtn.querySelector('.whatsapp-badge');
+    if (badge) badge.style.display = 'none';
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      widget.classList.remove('active');
+    });
+  }
+
+  function sendMsg() {
+    const text = input.value.trim();
+    const phone = '923281132589';
+    let url = `https://wa.me/${phone}`;
+    if (text) {
+      url += `?text=${encodeURIComponent(text)}`;
+    } else {
+      url += `?text=${encodeURIComponent("Hello! I visited your portfolio and I'm interested in working with you.")}`;
+    }
+    window.open(url, '_blank');
+    input.value = '';
+    widget.classList.remove('active');
+  }
+
+  if (sendBtn) {
+    sendBtn.addEventListener('click', sendMsg);
+  }
+
+  if (input) {
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        sendMsg();
+      }
+    });
+  }
+})();
+
