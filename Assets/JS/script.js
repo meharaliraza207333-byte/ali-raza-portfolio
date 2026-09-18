@@ -1,20 +1,3 @@
-/* ========== Loader ========== */
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    document.getElementById('loader').classList.add('hidden');
-  }, 350);
-});
-
-/* ========== AOS Animations ========== */
-if (typeof AOS !== 'undefined') {
-  AOS.init({
-    duration: 800,
-    easing: 'ease-out-cubic',
-    once: true,
-    offset: 80
-  });
-}
-
 /* ========== Theme Toggle (Local Storage) ========== */
 (function initTheme() {
   const themeToggle = document.getElementById('themeToggle');
@@ -149,9 +132,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 /* ========== Sticky Navbar ========== */
 const navbar = document.getElementById('navbar');
+const scrollProgress = document.getElementById('scrollProgress');
+let scrollFramePending = false;
+
+function updateScrollUI() {
+  const scrollTop = window.scrollY;
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  navbar.classList.toggle('scrolled', scrollTop > 24);
+  if (scrollProgress) {
+    const progress = scrollable > 0 ? Math.min((scrollTop / scrollable) * 100, 100) : 0;
+    scrollProgress.style.width = `${progress}%`;
+  }
+  scrollFramePending = false;
+}
+
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 50);
-});
+  if (!scrollFramePending) {
+    requestAnimationFrame(updateScrollUI);
+    scrollFramePending = true;
+  }
+}, { passive: true });
+
+updateScrollUI();
 
 /* ========== Mobile Menu Toggle ========== */
 const menuToggle = document.getElementById('menuToggle');

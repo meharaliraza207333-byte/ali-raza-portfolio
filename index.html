@@ -13,9 +13,8 @@
   <title>Ali Raza | Junior Full-Stack Web Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="Assets/CSS/style.css">
   <script>
     (function () {
@@ -27,14 +26,7 @@
 <body>
 
   <a class="skip-link" href="#main-content">Skip to main content</a>
-
-  <!-- Loader -->
-  <div id="loader">
-    <div class="loader-content">
-      <div class="loader-spinner"></div>
-      <p class="loader-text">Ali Raza</p>
-    </div>
-  </div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <!-- Particle Canvas -->
   <canvas id="particles"></canvas>
@@ -74,13 +66,13 @@
     <div class="container hero-container">
       <div class="hero-content reveal">
         <p class="hero-greeting"><span class="availability-dot"></span> Open to junior developer roles</p>
-        <h1 class="hero-name">Ali Raza</h1>
+        <h1 class="hero-name">Ali <span>Raza</span></h1>
         <div class="hero-title-wrapper">
           <span class="hero-title-prefix">I'm a </span>
           <span class="typed-text" id="typedText"></span>
           <span class="cursor">|</span>
         </div>
-        <p class="hero-description">I build fast, responsive, and client-focused websites using <strong>PHP, Laravel, WordPress</strong> &amp; modern frontend technologies. Based in Lahore, Pakistan — available for freelance worldwide.</p>
+        <p class="hero-description">I build fast, responsive, and user-focused websites using <strong>PHP, Laravel, WordPress</strong> and modern frontend technologies. Based in Lahore and open to junior developer roles, remote opportunities, and select freelance projects.</p>
         <div class="hero-badges">
           <span class="hero-badge"><i class="fab fa-laravel"></i> Laravel</span>
           <span class="hero-badge"><i class="fab fa-wordpress"></i> WordPress</span>
@@ -98,13 +90,21 @@
           <a href="https://wa.me/923281132589" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           <a href="mailto:meharaliraza207333@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
+        <div class="hero-proof" aria-label="Professional details">
+          <span><i class="fas fa-location-dot"></i> Lahore, Pakistan</span>
+          <span><i class="fas fa-briefcase"></i> Open to work</span>
+          <span><i class="fas fa-laptop-code"></i> Remote ready</span>
+        </div>
       </div>
       <div class="hero-visual reveal">
+        <div class="hero-glow" aria-hidden="true"></div>
         <div class="hero-avatar-ring">
           <div class="hero-avatar">
             <img class="hero-avatar-img" src="Assets/img/ali-raza-logo.png" alt="Ali Raza - Web Developer">
           </div>
         </div>
+        <div class="tech-float tech-float-code"><i class="fas fa-code"></i><span>Clean Code</span></div>
+        <div class="tech-float tech-float-stack"><i class="fab fa-laravel"></i><span>Laravel</span></div>
         <div class="hero-status">
           <span class="status-dot"></span> Available for opportunities
         </div>
@@ -118,7 +118,7 @@
   <!-- About Section -->
   <section id="about" class="section about-section">
     <div class="container">
-      <h2 class="section-title reveal"><span>About</span> Me</h2>
+      <h2 class="section-title reveal" data-kicker="Who I am"><span>About</span> Me</h2>
       <div class="about-grid">
         <div class="about-image reveal">
           <div class="about-avatar-card">
@@ -153,7 +153,7 @@
   <!-- Skills Section -->
   <section id="skills" class="section skills-section">
     <div class="container">
-      <h2 class="section-title reveal"><span>My</span> Skills</h2>
+      <h2 class="section-title reveal" data-kicker="My toolkit"><span>My</span> Skills</h2>
       <div class="skills-tabs reveal">
         <button class="skill-tab active" data-tab="frontend">Frontend</button>
         <button class="skill-tab" data-tab="backend">Backend</button>
@@ -199,7 +199,7 @@
   <!-- Services Section -->
   <section id="services" class="section services-section">
     <div class="container">
-      <h2 class="section-title reveal"><span>My</span> Services</h2>
+      <h2 class="section-title reveal" data-kicker="What I deliver"><span>My</span> Services</h2>
       <div class="services-grid">
         <div class="service-card reveal">
           <div class="service-icon"><i class="fas fa-code"></i></div>
@@ -244,7 +244,7 @@
   <!-- Portfolio Section -->
   <section id="portfolio" class="section portfolio-section">
     <div class="container">
-      <h2 class="section-title reveal" data-aos="fade-up"><span>My</span> Projects</h2>
+      <h2 class="section-title reveal" data-kicker="Selected work" data-aos="fade-up"><span>My</span> Projects</h2>
       <p class="section-subtitle reveal" data-aos="fade-up" data-aos-delay="100">Explore my latest work with live demos and source code.</p>
       <div class="portfolio-filters reveal" data-aos="fade-up" data-aos-delay="150">
         <button class="filter-btn active" data-filter="all">All</button>
@@ -335,7 +335,7 @@
   <!-- My Reviews Section -->
   <section id="reviews" class="section testimonials-section reviews-section">
     <div class="container">
-      <h2 class="section-title reveal" data-aos="fade-up"><span>My</span> Reviews</h2>
+      <h2 class="section-title reveal" data-kicker="Client feedback" data-aos="fade-up"><span>My</span> Reviews</h2>
       <p class="section-subtitle reveal" data-aos="fade-up" data-aos-delay="100">Feedback from clients, mentors, and people I've worked with.</p>
       <div class="reviews-summary reveal" data-aos="fade-up" data-aos-delay="120">
         <div class="reviews-summary-item">
@@ -410,7 +410,7 @@
   <!-- Education Timeline -->
   <section id="education" class="section education-section">
     <div class="container">
-      <h2 class="section-title reveal"><span>My</span> Education</h2>
+      <h2 class="section-title reveal" data-kicker="My journey"><span>My</span> Education</h2>
       <div class="timeline">
         <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
@@ -446,7 +446,7 @@
   <!-- Contact Section -->
   <section id="contact" class="section contact-section">
     <div class="container">
-      <h2 class="section-title reveal"><span>Contact</span> Me</h2>
+      <h2 class="section-title reveal" data-kicker="Start a conversation"><span>Contact</span> Me</h2>
       <div class="contact-grid">
         <div class="contact-info reveal">
           <h3>Let's Work Together</h3>
@@ -603,7 +603,6 @@
     <div class="whatsapp-tooltip">Chat with me!</div>
   </button>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="Assets/JS/script.js"></script>
 </body>
 </html>
