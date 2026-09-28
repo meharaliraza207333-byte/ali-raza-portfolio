@@ -1,0 +1,23 @@
+@media (max-width:1100px){
+  .container,.hero__layout,.navbar__inner{width:min(var(--container),calc(100% - 48px))}
+  .hero__layout{grid-template-columns:1fr .72fr;gap:3vw}.hero__title{font-size:clamp(5.5rem,13vw,9rem)}
+  .about__editorial{gap:7vw}.projects__intro{grid-template-columns:1fr .55fr}.project-panel{min-height:auto}.experience__layout{gap:5vw}
+}
+@media (max-width:768px){
+  :root{--nav-h:70px}.container,.hero__layout,.navbar__inner{width:calc(100% - 36px)}.section{padding:100px 0}.section-head{margin-bottom:48px}.section-head p{display:none}
+  .navbar__links{display:none}.navbar__toggle{display:grid;place-items:center}.navbar__mobile{position:fixed;display:grid;align-content:center;gap:8px;inset:var(--nav-h) 0 0;background:rgba(5,5,5,.98);padding:30px;z-index:79}.navbar__mobile a{font:600 clamp(2.5rem,12vw,5rem) var(--display);letter-spacing:-.06em;border-bottom:1px solid var(--line);padding:7px 0}
+  .global-canvas{opacity:.32;mask-image:linear-gradient(#000,transparent 60%)}
+  .hero{padding:calc(var(--nav-h) + 28px) 0 75px;min-height:auto}.hero::before{background:linear-gradient(#050505 0%,rgba(5,5,5,.8) 50%,rgba(5,5,5,.2))}.hero__layout{grid-template-columns:minmax(0,1fr)}.hero__copy{min-width:0}.hero__intro{margin-bottom:18px}.hero__edition{display:none}.hero__title{font-size:clamp(4.8rem,20vw,7.5rem);margin-bottom:25px}.hero__line{width:100%}.hero__line--outline{margin-left:0}.hero__meta{font-size:.58rem}.hero__text{font-size:.9rem}.hero__portrait{grid-row:2;margin-top:24px}.portrait{width:min(92vw,460px);height:auto;aspect-ratio:.8}.hero__scroll{display:none}.hero__socials{margin-top:22px}
+  .display-heading{font-size:clamp(4.5rem,23vw,8rem)}.about__arrow{width:45px;height:45px}.about__editorial{grid-template-columns:1fr;margin:75px 0 65px;gap:48px}.about__lead{font-size:clamp(1.8rem,7vw,2.6rem)}.about__stats{grid-template-columns:1fr}.stat-card,.stat-card+article{padding:28px 0;border-right:0;border-bottom:1px solid rgba(0,0,0,.16)}
+  .skills__title{font-size:clamp(4rem,20vw,7rem);margin-bottom:55px}.skill-row{grid-template-columns:35px 1fr 20px;padding:26px 0;gap:12px}.skill-row:hover{padding-inline:8px}.skill-row__list{grid-column:2/4}.skill-row__symbol{grid-column:3;grid-row:1}
+  .projects__intro{grid-template-columns:1fr}.projects__intro h2{font-size:clamp(3.6rem,15.5vw,6.4rem)}.projects__device{display:none}.projects__stack{gap:22px}.project-panel,.project-panel:nth-child(n){position:relative;top:auto;min-height:0;padding:11px}.project-panel__top{height:38px;font-size:.52rem}.project-panel__media{height:48vw;min-height:250px}.project-art__window{width:82%;height:72%;padding:11px}.project-panel__body{grid-template-columns:1fr;padding:24px 5px 8px;gap:24px}.project-panel__meta{gap:22px}
+  .experience__layout{grid-template-columns:1fr}.experience__sticky{position:relative;top:auto}.experience__sticky h2{font-size:clamp(4rem,20vw,7rem)}.timeline__item{grid-template-columns:36px 1fr 8px;padding:32px 0;gap:12px}
+  .contact h2{font-size:clamp(4.3rem,22vw,8rem);margin-bottom:85px}.contact h2 span:nth-child(2){margin-left:8vw}.contact h2 span:nth-child(4){margin-left:0}.contact__lower{grid-template-columns:1fr;gap:65px}.contact__send{align-items:flex-start;flex-direction:column}
+  .footer__topline{grid-template-columns:1fr 1fr}.footer__topline p{display:none}.footer__socials{gap:10px}.footer__socials a{font-size:0}.footer__socials svg{width:20px;height:20px}.footer__bottom{grid-template-columns:1fr auto}.footer__bottom nav{display:none}.footer__wordmark{font-size:18vw}
+  .loader{padding:24px}.loader__bar{left:24px;right:24px}.loader::after{font-size:.5rem}
+}
+@media (max-width:430px){
+  .hero__title{font-size:19vw}.hero__actions{display:grid;grid-template-columns:1fr 1fr}.hero__actions .btn{padding:0 15px;gap:9px}.hero__socials{gap:12px}.hero__socials>span{display:none}.portrait__plate--top{right:2%}.portrait__plate--bottom{left:1%}
+  .project-panel__media{min-height:220px}.project-panel__body h3{font-size:2.1rem}.contact h2{font-size:21vw}.contact__form input,.contact__form textarea{font-size:1rem}.footer__bottom{font-size:.5rem}
+}
+@media (max-width:375px){.container,.hero__layout,.navbar__inner{width:calc(100% - 28px)}.hero__tags{gap:10px}.hero__tags span{font-size:.55rem}.portrait{width:94vw}.btn{height:54px}.section{padding:86px 0}}
