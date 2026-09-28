@@ -98,7 +98,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 /* ========== Typing Animation ========== */
 (function initTyping() {
-  const titles = ['Web Developer', 'PHP / Laravel Developer', 'WordPress Developer', 'Frontend Developer'];
+  const titles = ['Web Developer', 'PHP / Laravel Developer', 'WordPress Developer', 'React / Next.js Developer', 'Frontend Developer'];
   const el = document.getElementById('typedText');
   if (!el) return;
   let titleIndex = 0;
