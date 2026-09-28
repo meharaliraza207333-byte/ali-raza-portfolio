@@ -1,18 +1,608 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ali Raza — Creative Web Developer. Modern, responsive and interactive digital experiences." />
-    <meta name="theme-color" content="#050505" />
-    <title>Ali Raza — Creative Web Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/Src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ali Raza is a Lahore-based junior full-stack web developer skilled in PHP, Laravel, WordPress, JavaScript and responsive frontend development. Available for junior roles and freelance projects.">
+  <meta name="keywords" content="Web Developer, PHP Developer, Laravel Developer, WordPress Developer, Frontend Developer, Ali Raza">
+  <meta name="author" content="Ali Raza">
+  <meta property="og:title" content="Ali Raza | Web Developer">
+  <meta property="og:description" content="Passionate about crafting beautiful, responsive, and user-friendly web experiences with PHP, Laravel & WordPress.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="Assets/img/ali-raza-logo.png">
+  <title>Ali Raza | Junior Full-Stack Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="Assets/CSS/style.css">
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <img src="Assets/img/ali-raza-logo.png" alt="Ali Raza" class="logo-img">
+        <span class="logo-text">Ali<span>Raza</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Projects</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="https://wa.me/923281132589" target="_blank" rel="noopener" class="nav-link nav-hire">Hire Me</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light and dark mode">
+          <i class="fas fa-sun theme-icon-light"></i>
+          <i class="fas fa-moon theme-icon-dark"></i>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <main id="main-content">
+  <section id="hero" class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content reveal">
+        <p class="hero-greeting"><span class="availability-dot"></span> Open to junior developer roles</p>
+        <h1 class="hero-name">Ali <span>Raza</span></h1>
+        <div class="hero-title-wrapper">
+          <span class="hero-title-prefix">I'm a </span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor">|</span>
+        </div>
+        <p class="hero-description">I build fast, responsive, and user-focused websites using <strong>PHP, Laravel, WordPress</strong> and modern frontend technologies. Based in Lahore and open to junior developer roles, remote opportunities, and select freelance projects.</p>
+        <div class="hero-badges">
+          <span class="hero-badge"><i class="fab fa-laravel"></i> Laravel</span>
+          <span class="hero-badge"><i class="fab fa-wordpress"></i> WordPress</span>
+          <span class="hero-badge"><i class="fab fa-php"></i> PHP</span>
+          <span class="hero-badge"><i class="fab fa-js-square"></i> JavaScript</span>
+        </div>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Contact Me</a>
+          <a href="#portfolio" class="btn btn-outline">View Projects</a>
+          <a href="Assets/cv/Ali_Raza_Professional_CV_Final.pdf" download class="btn btn-resume"><i class="fas fa-download"></i> Download CV</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/meharaliraza207333-byte/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ali-raza-0301333a9/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/923281132589" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:meharaliraza207333@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="hero-proof" aria-label="Professional details">
+          <span><i class="fas fa-location-dot"></i> Lahore, Pakistan</span>
+          <span><i class="fas fa-briefcase"></i> Open to work</span>
+          <span><i class="fas fa-laptop-code"></i> Remote ready</span>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-avatar-ring">
+          <div class="hero-avatar">
+            <img class="hero-avatar-img" src="Assets/img/ali-raza-logo.png" alt="Ali Raza - Web Developer">
+          </div>
+        </div>
+        <div class="tech-float tech-float-code"><i class="fas fa-code"></i><span>Clean Code</span></div>
+        <div class="tech-float tech-float-stack"><i class="fab fa-laravel"></i><span>Laravel</span></div>
+        <div class="hero-status">
+          <span class="status-dot"></span> Available for opportunities
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll Down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title reveal" data-kicker="Who I am"><span>About</span> Me</h2>
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <div class="about-avatar-card">
+            <img class="about-avatar-img" src="Assets/img/ali-raza-logo.png" alt="Ali Raza - Web Developer">
+            <div class="about-badge">Web Developer</div>
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <h3 class="about-heading">A Passionate Web Developer Based in Lahore, Pakistan</h3>
+          <p>I am a student at <strong>Aptech Computer Education</strong>, pursuing <strong>HDSE (Higher Diploma in Software Engineering)</strong>. I work as a <strong>Web Developer</strong> with skills in HTML, CSS, JavaScript, <strong>PHP</strong>, <strong>Laravel</strong>, WordPress, and MySQL.</p>
+          <p>I'm a creative and hardworking developer who loves turning ideas into pixel-perfect, responsive, and user-friendly websites. My expertise spans frontend development, <strong>PHP/Laravel backend development</strong>, and WordPress customization.</p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-count="12">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Skills Mastered</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Projects Done</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Services</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary">Let's Talk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2 class="section-title reveal" data-kicker="My toolkit"><span>My</span> Skills</h2>
+      <div class="skills-tabs reveal">
+        <button class="skill-tab active" data-tab="frontend">Frontend</button>
+        <button class="skill-tab" data-tab="backend">Backend</button>
+        <button class="skill-tab" data-tab="cms">CMS / E-Commerce</button>
+        <button class="skill-tab" data-tab="tools">Tools</button>
+      </div>
+      <div class="skills-panel active" id="tab-frontend">
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-skill="95"><div class="skill-icon"><i class="fab fa-html5"></i></div><h4>HTML5</h4><div class="skill-bar"><div class="skill-progress" data-width="95"></div></div><span class="skill-percent">95%</span></div>
+          <div class="skill-card reveal" data-skill="90"><div class="skill-icon"><i class="fab fa-css3-alt"></i></div><h4>CSS3</h4><div class="skill-bar"><div class="skill-progress" data-width="90"></div></div><span class="skill-percent">90%</span></div>
+          <div class="skill-card reveal" data-skill="80"><div class="skill-icon"><i class="fab fa-js-square"></i></div><h4>JavaScript</h4><div class="skill-bar"><div class="skill-progress" data-width="80"></div></div><span class="skill-percent">80%</span></div>
+          <div class="skill-card reveal" data-skill="85"><div class="skill-icon"><i class="fab fa-bootstrap"></i></div><h4>Bootstrap</h4><div class="skill-bar"><div class="skill-progress" data-width="85"></div></div><span class="skill-percent">85%</span></div>
+          <div class="skill-card reveal" data-skill="90"><div class="skill-icon"><i class="fas fa-mobile-alt"></i></div><h4>Responsive Design</h4><div class="skill-bar"><div class="skill-progress" data-width="90"></div></div><span class="skill-percent">90%</span></div>
+          <div class="skill-card reveal" data-skill="75"><div class="skill-icon"><i class="fas fa-paint-brush"></i></div><h4>UI/UX Design</h4><div class="skill-bar"><div class="skill-progress" data-width="75"></div></div><span class="skill-percent">75%</span></div>
+        </div>
+      </div>
+      <div class="skills-panel" id="tab-backend">
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-skill="75"><div class="skill-icon"><i class="fab fa-php"></i></div><h4>PHP</h4><div class="skill-bar"><div class="skill-progress" data-width="75"></div></div><span class="skill-percent">75%</span></div>
+          <div class="skill-card reveal" data-skill="70"><div class="skill-icon"><i class="fab fa-laravel"></i></div><h4>Laravel</h4><div class="skill-bar"><div class="skill-progress" data-width="70"></div></div><span class="skill-percent">70%</span></div>
+          <div class="skill-card reveal" data-skill="80"><div class="skill-icon"><i class="fas fa-database"></i></div><h4>MySQL</h4><div class="skill-bar"><div class="skill-progress" data-width="80"></div></div><span class="skill-percent">80%</span></div>
+        </div>
+      </div>
+      <div class="skills-panel" id="tab-cms">
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-skill="85"><div class="skill-icon"><i class="fab fa-wordpress"></i></div><h4>WordPress</h4><div class="skill-bar"><div class="skill-progress" data-width="85"></div></div><span class="skill-percent">85%</span></div>
+          <div class="skill-card reveal" data-skill="80"><div class="skill-icon"><i class="fab fa-elementor"></i></div><h4>Elementor</h4><div class="skill-bar"><div class="skill-progress" data-width="80"></div></div><span class="skill-percent">80%</span></div>
+          <div class="skill-card reveal" data-skill="75"><div class="skill-icon"><i class="fas fa-shopping-cart"></i></div><h4>WooCommerce</h4><div class="skill-bar"><div class="skill-progress" data-width="75"></div></div><span class="skill-percent">75%</span></div>
+        </div>
+      </div>
+      <div class="skills-panel" id="tab-tools">
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-skill="75"><div class="skill-icon"><i class="fab fa-git-alt"></i></div><h4>Git / GitHub</h4><div class="skill-bar"><div class="skill-progress" data-width="75"></div></div><span class="skill-percent">75%</span></div>
+          <div class="skill-card reveal" data-skill="70"><div class="skill-icon"><i class="fas fa-drafting-compass"></i></div><h4>Figma</h4><div class="skill-bar"><div class="skill-progress" data-width="70"></div></div><span class="skill-percent">70%</span></div>
+          <div class="skill-card reveal" data-skill="90"><div class="skill-icon"><i class="fas fa-code"></i></div><h4>VS Code</h4><div class="skill-bar"><div class="skill-progress" data-width="90"></div></div><span class="skill-percent">90%</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Services Section -->
+  <section id="services" class="section services-section">
+    <div class="container">
+      <h2 class="section-title reveal" data-kicker="What I deliver"><span>My</span> Services</h2>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-code"></i></div>
+          <h3>Custom Website Development</h3>
+          <p>Building modern, fast, and interactive websites from scratch using HTML5, CSS3, JavaScript, and Bootstrap with clean, maintainable code.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fab fa-wordpress"></i></div>
+          <h3>WordPress Development</h3>
+          <p>Creating professional WordPress websites with custom themes, Elementor page builder, and optimized performance for your business.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Responsive Website Design</h3>
+          <p>Designing pixel-perfect responsive websites that look stunning on all devices — desktops, tablets, and mobile phones.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Landing Page Design</h3>
+          <p>Crafting high-converting landing pages with compelling design, clear CTAs, and high-performance structure to boost conversions.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fab fa-php"></i></div>
+          <h3>PHP / Laravel Development</h3>
+          <p>Building robust backend applications with PHP and Laravel including APIs, authentication, database management, and MVC architecture.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-shopping-bag"></i></div>
+          <h3>WooCommerce Development</h3>
+          <p>Setting up and customizing WooCommerce online stores with product management, payment gateways, and optimized checkout flows.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <h3>Bug Fixing &amp; Maintenance</h3>
+          <p>Diagnosing and fixing website issues, improving performance, updating plugins, and providing ongoing support for your web projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section portfolio-section">
+    <div class="container">
+      <h2 class="section-title reveal" data-kicker="Selected work" data-aos="fade-up"><span>My</span> Projects</h2>
+      <p class="section-subtitle reveal" data-aos="fade-up" data-aos-delay="100">Explore my latest work with live demos and source code.</p>
+      <div class="portfolio-filters reveal" data-aos="fade-up" data-aos-delay="150">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="php">PHP / Laravel</button>
+        <button class="filter-btn" data-filter="wordpress">WordPress</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <article class="project-card reveal" data-aos="fade-up" data-category="frontend">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="Ecommerce Website project preview" loading="lazy">
+            <span class="project-tag">E-Commerce</span>
+            <div class="project-hover">
+              <span class="btn btn-primary btn-sm project-btn project-btn-disabled"><i class="fas fa-clock"></i> Demo Soon</span>
+              <a href="https://github.com/meharaliraza207333-byte" class="btn btn-outline btn-sm project-btn" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Ecommerce Website</h3>
+            <p>Full-featured online store with product listings, cart functionality, and responsive design.</p>
+            <div class="project-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+          </div>
+        </article>
+        <article class="project-card reveal" data-aos="fade-up" data-aos-delay="100" data-category="wordpress">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" alt="WordPress Business Website project preview" loading="lazy">
+            <span class="project-tag">WordPress</span>
+            <div class="project-hover">
+              <span class="btn btn-primary btn-sm project-btn project-btn-disabled"><i class="fas fa-clock"></i> Demo Soon</span>
+              <a href="https://github.com/meharaliraza207333-byte" class="btn btn-outline btn-sm project-btn" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>WordPress Business Website</h3>
+            <p>Professional business website built with WordPress and Elementor with custom design.</p>
+            <div class="project-tech"><span>WordPress</span><span>Elementor</span><span>CSS3</span></div>
+          </div>
+        </article>
+        <article class="project-card reveal" data-aos="fade-up" data-aos-delay="200" data-category="frontend">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Portfolio Website project preview" loading="lazy">
+            <span class="project-tag">Portfolio</span>
+            <div class="project-hover">
+              <a href="index.html" class="btn btn-primary btn-sm project-btn" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://github.com/meharaliraza207333-byte" class="btn btn-outline btn-sm project-btn" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Portfolio Website</h3>
+            <p>Modern personal portfolio with animations, glassmorphism design, and smooth interactions.</p>
+            <div class="project-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+          </div>
+        </article>
+        <article class="project-card reveal" data-aos="fade-up" data-aos-delay="400" data-category="frontend">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Admin Dashboard UI project preview" loading="lazy">
+            <span class="project-tag">Dashboard</span>
+            <div class="project-hover">
+              <span class="btn btn-primary btn-sm project-btn project-btn-disabled"><i class="fas fa-clock"></i> Demo Soon</span>
+              <a href="https://github.com/meharaliraza207333-byte" class="btn btn-outline btn-sm project-btn" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Admin Dashboard UI</h3>
+            <p>Feature-rich admin dashboard with charts, tables, and modern UI components.</p>
+            <div class="project-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+          </div>
+        </article>
+        <article class="project-card reveal" data-aos="fade-up" data-aos-delay="500" data-category="php">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" alt="PHP Laravel Web Application" loading="lazy">
+            <span class="project-tag">PHP / Laravel</span>
+            <div class="project-hover">
+              <span class="btn btn-primary btn-sm project-btn project-btn-disabled"><i class="fas fa-clock"></i> Demo Soon</span>
+              <a href="https://github.com/meharaliraza207333-byte" class="btn btn-outline btn-sm project-btn" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Healthcare Management System</h3>
+            <p>Full-stack web application built with PHP/Laravel featuring user auth, role-based dashboards, and MySQL database.</p>
+            <div class="project-tech"><span>PHP</span><span>Laravel</span><span>MySQL</span><span>Bootstrap</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Reviews Section -->
+  <section id="reviews" class="section testimonials-section reviews-section">
+    <div class="container">
+      <h2 class="section-title reveal" data-kicker="Client feedback" data-aos="fade-up"><span>My</span> Reviews</h2>
+      <p class="section-subtitle reveal" data-aos="fade-up" data-aos-delay="100">Feedback from clients, mentors, and people I've worked with.</p>
+      <div class="reviews-summary reveal" data-aos="fade-up" data-aos-delay="120">
+        <div class="reviews-summary-item">
+          <strong>4.9</strong>
+          <span>Average Rating</span>
+        </div>
+        <div class="reviews-summary-item">
+          <strong>4+</strong>
+          <span>Total Reviews</span>
+        </div>
+        <div class="reviews-summary-item">
+          <strong>100%</strong>
+          <span>Recommended</span>
+        </div>
+      </div>
+      <div class="testimonials-slider reveal" data-aos="fade-up" data-aos-delay="150">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-text">"Ali delivered a clean, responsive portfolio that exceeded expectations. His attention to UI details and clean architecture made a real difference for my online presence."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">SA</div>
+              <div>
+                <h4>Sara Ahmed</h4>
+                <span>Small Business Owner</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-text">"Great communication and fast delivery. The WordPress site was easy to manage and looked professional on all devices. Highly recommended for frontend work."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">HK</div>
+              <div>
+                <h4>Hassan Khan</h4>
+                <span>Freelance Client</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+            <p class="testimonial-text">"Ali shows strong frontend fundamentals and always tries to improve UX. His landing page optimization helped us get better engagement and page speed scores."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">MR</div>
+              <div>
+                <h4>Mentor Review</h4>
+                <span>Aptech Instructor</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-text">"Professional, creative, and reliable. Ali transformed our basic idea into a modern website with smooth animations and a polished mobile experience."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">AF</div>
+              <div>
+                <h4>Ayesha Fatima</h4>
+                <span>Startup Founder</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="testimonial-btn" id="testimonialPrev" aria-label="Previous review"><i class="fas fa-chevron-left"></i></button>
+          <div class="testimonial-dots" id="testimonialDots"></div>
+          <button class="testimonial-btn" id="testimonialNext" aria-label="Next review"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Timeline -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <h2 class="section-title reveal" data-kicker="My journey"><span>My</span> Education</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Currently Enrolled</span>
+            <h3>HDSE - Higher Diploma in Software Engineering</h3>
+            <h4>Aptech Learning Center</h4>
+            <p>Pursuing advanced software engineering diploma covering full-stack development, databases, and software design principles.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Completed</span>
+            <h3>Intermediate</h3>
+            <h4>College Education</h4>
+            <p>Successfully completed intermediate education, building a strong academic foundation for software engineering studies.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Ongoing</span>
+            <h3>Self-Learning & Practice</h3>
+            <h4>Online Platforms & Projects</h4>
+            <p>Continuously learning frontend technologies, WordPress development, and backend web frameworks through online courses and hands-on projects.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title reveal" data-kicker="Start a conversation"><span>Contact</span> Me</h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's Work Together</h3>
+          <p>Have a project in mind? Let's discuss and bring your ideas to life with modern web solutions.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:03281132589">0328-1132589</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:meharaliraza207333@gmail.com">meharaliraza207333@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4>Location</h4>
+                <p>Lahore, Pakistan</p>
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/923281132589" target="_blank" rel="noopener" class="btn btn-whatsapp btn-whatsapp-lg"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+          <div class="contact-socials">
+            <a href="https://github.com/meharaliraza207333-byte" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ali-raza-0301333a9/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/923281132589" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:meharaliraza207333@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/meharaliraza207333@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="New Portfolio Message">
+          <input type="hidden" name="_next" id="formNext" value="">
+          <div class="form-group">
+            <input type="text" name="name" id="formName" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" id="formEmail" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" id="formSubject" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" id="formMessage" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+          <button type="submit" class="btn btn-primary btn-full">Send Message <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#hero" class="logo">
+            <img src="Assets/img/ali-raza-logo.png" alt="Ali Raza" class="logo-img">
+            <span class="logo-text">Ali<span>Raza</span></span>
+          </a>
+          <p>Web Developer | PHP & Laravel | WordPress</p>
+          <div class="footer-socials">
+            <a href="https://github.com/meharaliraza207333-byte" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ali-raza-0301333a9/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/923281132589" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:meharaliraza207333@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Projects</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <a href="tel:03281132589"><i class="fas fa-phone"></i> 0328-1132589</a>
+          <a href="mailto:meharaliraza207333@gmail.com"><i class="fas fa-envelope"></i> meharaliraza207333@gmail.com</a>
+          <a href="https://wa.me/923281132589" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ali Raza. All Rights Reserved. | Crafted with <i class="fas fa-heart" style="color:#7c3aed"></i></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Mobile Sticky Contact Bar -->
+  <div class="mobile-sticky-bar" id="mobileStickyBar" role="navigation" aria-label="Quick contact">
+    <a href="https://wa.me/923281132589" target="_blank" rel="noopener" class="sticky-btn sticky-whatsapp" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="mailto:meharaliraza207333@gmail.com" class="sticky-btn sticky-email" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+      <span>Email</span>
+    </a>
+    <a href="#contact" class="sticky-btn sticky-hire" aria-label="Hire Me">
+      <i class="fas fa-handshake"></i>
+      <span>Hire Me</span>
+    </a>
+  </div>
+
+  <!-- Floating WhatsApp Widget -->
+  <div class="wa-chat-widget" id="waChatWidget">
+    <div class="wa-chat-header">
+      <div class="wa-chat-avatar-status">
+        <img src="Assets/img/ali-raza-logo.png" alt="Ali Raza" class="wa-chat-avatar">
+        <span class="wa-status-dot"></span>
+      </div>
+      <div class="wa-chat-title-info">
+        <h4>Ali Raza</h4>
+        <p><span class="status-text">Online</span></p>
+      </div>
+      <button class="wa-chat-close" id="waChatClose" aria-label="Close chat"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-msg-bubble">
+        <p class="wa-msg-time">Just now</p>
+        <div class="wa-msg-text">
+          Hi there! 👋 I build premium websites using Laravel, WordPress, and React. How can I help you today?
+        </div>
+      </div>
+    </div>
+    <div class="wa-chat-footer">
+      <input type="text" id="waChatInput" placeholder="Type a message..." aria-label="WhatsApp message input">
+      <button id="waChatSend" aria-label="Send WhatsApp message"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <button class="whatsapp-floating-btn" id="waToggleBtn" aria-label="Open WhatsApp Chat">
+    <div class="whatsapp-badge">1</div>
+    <div class="whatsapp-icon-wrapper">
+      <i class="fab fa-whatsapp"></i>
+    </div>
+    <div class="whatsapp-tooltip">Chat with me!</div>
+  </button>
+
+  <script src="Assets/JS/script.js"></script>
+</body>
 </html>

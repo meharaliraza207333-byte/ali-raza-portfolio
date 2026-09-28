@@ -1,0 +1,97 @@
+# 🚀 Ali Raza — Premium Developer Portfolio
+
+A modern, mobile-first, and client-focused developer portfolio built with **HTML, CSS, and JavaScript**.
+
+![Portfolio Preview](Assets/Images/avatar.jpg)
+
+---
+
+## ✨ Features
+
+- ⚡ **Mobile-First Design** — Fully responsive from 360px to 1440px+
+- 🎨 **Premium Dark UI** — Deep dark theme with indigo/teal accent palette
+- 💬 **WhatsApp Live-Chat Widget** — Floating chat button with popup widget
+- 📱 **Mobile Sticky Contact Bar** — Quick WhatsApp, Email & Hire Me bar
+- 🗂️ **Tabbed Skills Section** — Frontend, Backend, CMS/E-Commerce, Tools
+- 🛠️ **7 Services** — Including WooCommerce & Bug Fixing/Maintenance
+- 🎬 **Smooth Animations** — AOS scroll animations + micro-interactions
+- 🌙 **Dark/Light Theme Toggle**
+- 🧩 **Glassmorphism UI Cards**
+- 📬 **Working Contact Form** — Powered by FormSubmit
+- ♿ **Accessibility Ready** — `prefers-reduced-motion` support
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Usage |
+|---|---|
+| HTML5 | Structure & Semantic Markup |
+| CSS3 | Styling, Animations, Responsive Design |
+| Vanilla JavaScript | Interactivity, Tabs, WhatsApp Widget |
+| Font Awesome | Icons |
+| Google Fonts (Inter + Outfit) | Typography |
+| AOS.js | Scroll Animations |
+| FormSubmit | Contact Form Backend |
+
+---
+
+## 📂 Project Structure
+
+```
+My-portfolio/
+├── index.html              # Main HTML file
+├── Assets/
+│   ├── CSS/
+│   │   └── style.css       # All styles
+│   ├── JS/
+│   │   └── script.js       # All interactivity
+│   └── Images/             # Profile & project images
+├── vercel.json             # Vercel deployment config
+└── README.md
+```
+
+---
+
+## 🌐 Live Demo
+
+> 🔗 **[View Live Portfolio →](https://my-portfolio-meharaliraza207333-bytes-projects.vercel.app/)**
+
+---
+
+## 💼 Services Offered
+
+- ✅ Custom Website Development
+- ✅ WordPress Development
+- ✅ Responsive Website Design
+- ✅ Landing Page Design
+- ✅ PHP / Laravel Development
+- ✅ WooCommerce Development
+- ✅ Bug Fixing & Maintenance
+
+---
+
+## 📞 Contact
+
+| Channel | Details |
+|---|---|
+| 📧 Email | meharaliraza207333@gmail.com |
+| 💬 WhatsApp | [+92 328 1132589](https://wa.me/923281132589) |
+| 🔗 LinkedIn | [linkedin.com/in/ali-raza-dev](https://www.linkedin.com/in/ali-raza-dev) |
+| 💻 GitHub | [github.com/meharaliraza207333-byte](https://github.com/meharaliraza207333-byte) |
+
+---
+
+## 🚀 Deployment
+
+This project is deployed on **Vercel** with automatic deployments on every push to `main`.
+
+---
+
+## 📝 License
+
+This project is open source. Feel free to use it as inspiration for your own portfolio!
+
+---
+
+> Crafted with ❤️ by **Ali Raza** — Full Stack Developer
